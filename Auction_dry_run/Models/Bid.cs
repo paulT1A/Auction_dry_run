@@ -32,5 +32,3 @@ namespace Auction_dry_run.Models
 }
 
 
-//https://www.youtube.com/watch?v=K3JPDxN9mf4&list=PLTN6P1lWbNgcJlEBIQb3lI3WASjBAmlRJ&index=2
-//6.51

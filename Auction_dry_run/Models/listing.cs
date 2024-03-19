@@ -27,7 +27,7 @@ namespace Auction_dry_run.Models
 
         public List<Bid>? Bids { get; set; }
 
-        public List<Comment>? comments { get; set; }
+        //public List<Comment>? comments { get; set; }
 
 
 

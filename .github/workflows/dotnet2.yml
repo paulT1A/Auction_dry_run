@@ -28,5 +28,13 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Test with the dotnet CLI
       run: dotnet test
+    - name: Lint Code Base
+      uses: github/super-linter@v4
+      env:
+        VALIDATE_ALL_CODEBASE: true
+        VALIDATE_JAVASCRIPT_ES: true
+        VALIDATE_PYTHON_BLACK: true
+        VALIDATE_HTML: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #blam
      

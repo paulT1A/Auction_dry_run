@@ -26,3 +26,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Super-linter
+      uses: super-linter/super-linter@v6.3.0  # x-release-please-version
+      
+
+

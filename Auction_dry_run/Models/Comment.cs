@@ -4,19 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Auction_dry_run.Models
 {
-    public class listing
+    public class Comment
     {
 
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
-
-        public double Price { get; set; }
-        public string ImagePath { get; set; }
-
-        public bool sold { get; set; }
-
-
 
         [Required]
         //placeholder for identity of bidder
@@ -25,16 +17,15 @@ namespace Auction_dry_run.Models
 
         public IdentityUser? User { get; set; }
 
-        public List<Bid>? Bids { get; set; }
+        public int? ListingId { get; set; }
 
-        public List<Comment>? comments { get; set; }
+        [ForeignKey("ListingId")]
+        //listign property added rom other class for cooperation -- make nullable
+        public listing? Listing { get; set; }
 
-        //blah
 
 
-        //j test
 
-        //test for yaml on windows
 
 
 

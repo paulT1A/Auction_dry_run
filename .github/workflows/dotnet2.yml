@@ -30,10 +30,3 @@ jobs:
       run: dotnet test
     - name: format
       run: dotnet format style
-    - name: analyse
-      uses: github/codeql-action/init@v3
-      with:
-        languages: c-cpp, csharp  
-
-#blam
-     

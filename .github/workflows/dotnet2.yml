@@ -34,13 +34,6 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: c-cpp, csharp  
-   # - name: Lint Code Base
-     # uses: github/super-linter@v4
-      #env:
-     #   VALIDATE_ALL_CODEBASE: true
-    #    VALIDATE_JAVASCRIPT_ES: true
-   #     VALIDATE_PYTHON_BLACK: true
-    #    VALIDATE_HTML: true
-     #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 #blam
      

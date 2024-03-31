@@ -33,6 +33,9 @@ jobs:
     - name: analyse
       uses: github/codeql-action/init@v3
       with:
-        languages: c-cpp, csharp  
+        languages: c-cpp, csharp
+    - uses: actions/checkout@v4
+    - name: Run ansible-lint
+      uses: ansible/ansible-lint@main # or version tag instead of 'main'  
 
 #blam

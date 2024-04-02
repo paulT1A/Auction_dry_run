@@ -34,21 +34,19 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: c-cpp, csharp
-   # - uses: actions/checkout@v4
-    #- name: Run ansible-lint
-      #uses: ansible/ansible-lint@main # or version tag instead of 'main'
+    - uses: actions/checkout@v4
+    - name: Run ansible-lint
+      uses: ansible/ansible-lint@main # or version tag instead of 'main'
     - uses: actions/checkout@v2
 
       # Run NuGet restore for each project/solution to analyze
-    - name: Run NuGet restore
-      run: dotnet restore <%path_to_project_or_solution%>
+    #- name: Run NuGet restore
+     # run: dotnet restore <%path_to_project_or_solution%>
       
       # Run code analysis for all projects/solutions, such that code analysis violations break the build.
-    - name: Run .NET Code Analysis
-      uses: dotnet/code-analysis@v1
-      id: code-analysis
-     with:
-          build-breaking: true
-  
+   # - name: Run .NET Code Analysis
+   #   uses: dotnet/code-analysis@v1
+    #  id: code-analysis
+ 
 
 #blam

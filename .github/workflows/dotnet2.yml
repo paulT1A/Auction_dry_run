@@ -34,8 +34,14 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: c-cpp, csharp
-    - uses: actions/checkout@v4
-    - name: Run ansible-lint
-      uses: ansible/ansible-lint@main # or version tag instead of 'main'  
+   # - uses: actions/checkout@v4
+    #- name: Run ansible-lint
+      #uses: ansible/ansible-lint@main # or version tag instead of 'main'
+    - name: Run .NET Code Analysis
+      uses: dotnet/code-analysis
+      id: code-analysis
+      with:
+        build-breaking: true
+  
 
 #blam
